@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from collections import OrderedDict, defaultdict
 """ LFU Caching """
+from collections import OrderedDict, defaultdict
 
 BaseCaching = __import__('base_caching').BaseCaching
 
