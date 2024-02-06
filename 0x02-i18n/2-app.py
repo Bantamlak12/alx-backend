@@ -27,6 +27,8 @@ def home() -> str:
 
 @babel.localeselector
 def get_locale():
+    """ Best language maych
+    """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
