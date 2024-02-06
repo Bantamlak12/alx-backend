@@ -47,18 +47,18 @@ def get_locale():
     - Best language match
     """
     # Locale from URL parameters
-    locale = request.args['locale']
+    locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
 
     # Locale from user settings
     if g.user:
-        locale = g.user['locale']
+        locale = g.user.get('locale')
         if locale in app.config['LANGUAGES']:
             return locale
 
     # Locale from request header
-    locale = request.headers['locale']
+    locale = request.headers.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
 
