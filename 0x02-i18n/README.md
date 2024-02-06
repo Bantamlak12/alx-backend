@@ -1,0 +1,26 @@
+# Project: 0x02. i18n
+
+## Resources
+
+- [Flask-Babel](https://python-babel.github.io/flask-babel/)
+- [Flask i18n tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
+- [pytz](https://sourceforge.net/directory/software-development/windows/)
+
+## Learning Objectives
+
+- Learn how to parametrize Flask templates to display different languages
+- Learn how to infer the correct locale based on URL parameters, user settings or request headers
+- Learn how to localize timestamps
+
+## Tasks
+
+| Task                               | File                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0. Basic Flask app                 | [0-app.py](./0-app.py), [templates/0-index.html](templates/0-index.html)                                                                                                                                                                                                                                                                                                                                                                         |
+| 1. Basic Babel setup               | [1-app.py](./1-app.py) [templates/1-index.html](templates/1-index.html)                                                                                                                                                                                                                                                                                                                                                                          |
+| 2. Get locale from request         | [2-app.py](), [templates/2-index.html](templates/2-index.html)                                                                                                                                                                                                                                                                                                                                                                                   |
+| 3. Parametrize templates           | [3-app.py](./3-app.py), [babel.cfg](babel.cfg), [templates/3-index.html](templates/3-index.html), [translations/en/LC_MESSAGES/messages.po](translations/en/LC_MESSAGES/messages.po), [translations/fr/LC_MESSAGES/messages.po](translations/fr/LC_MESSAGES/messages.po), [translations/en/LC_MESSAGES/messages.mo](translations/en/LC_MESSAGES/messages.mo), [translations/fr/LC_MESSAGES/messages.mo](translations/fr/LC_MESSAGES/messages.mo) |
+| 4. Force locale with URL parameter | [4-app.py](./4-app.py), [templates/4-index.html](templates/4-index.html)                                                                                                                                                                                                                                                                                                                                                                         |
+| 5. Mock logging in                 | [5-app.py](./5-app.py), [templates/5-index.html](templates/5-index.html)                                                                                                                                                                                                                                                                                                                                                                         |
+| 6. Use user locale                 | [6-app.py](./6-app.py), [templates/6-index.html](templates/6-index.html)                                                                                                                                                                                                                                                                                                                                                                         |
+| 7. Infer appropriate time zone     | [7-app.py](./7-app.py), [templates/7-index.html](templates/7-index.html)                                                                                                                                                                                                                                                                                                                                                                         |
