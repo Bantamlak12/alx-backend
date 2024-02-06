@@ -3,14 +3,15 @@
 """
 from flask import Flask, render_template
 from flask_babel import Babel
+from typing import List
 
 
 class Config:
     """Config
     """
-    LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_LOCALE = "en"
-    BABEL_DEFAULT_TIMEZONE = "UTC"
+    LANGUAGES: List[str] = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE: str = "en"
+    BABEL_DEFAULT_TIMEZONE: str = "UTC"
 
 
 app = Flask(__name__)
@@ -19,7 +20,7 @@ babel = Babel(app)
 
 
 @app.route('/')
-def home():
+def home() -> str:
     """Home"""
     return render_template('1-index.html')
 
