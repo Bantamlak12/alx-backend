@@ -12,8 +12,8 @@ class Config:
     """Config
     """
     LANGUAGES = ["en", "fr"]
-    BEBEL_DEFAULT_LOCALE = "en"
-    BABEL_DEFAULT_TIMEZONE = "UTC"
+    app.config["BEBEL_DEFAULT_LOCALE"] = "en"
+    app.config["BABEL_DEFAULT_TIMEZONE"] = "UTC"
 
     @app.route('/')
     def home():
