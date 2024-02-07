@@ -9,6 +9,7 @@ from pytz.exceptions import UnknownTimeZoneError
 from pytz import timezone
 from flask_babel import Babel
 from typing import List
+from datetime import datetime
 
 
 users = {
@@ -39,7 +40,7 @@ def home() -> str:
     Returns:
     - The html file
     """
-    return render_template('7-index.html')
+    return render_template('index.html')
 
 
 @babel.localeselector
@@ -90,6 +91,13 @@ def before_request():
     """
     g.user = get_user()
 
+    # Get current UTC time
+    utc = datetime.utcnow()
+
+    # Convert UTC to locale time
+    locale_time = utc.astimezone(get_timezone())
+    g.time = locale_time.strftime("%b %d, %Y, %I:%M:%S %p")
+
 
 def validate_timezone(timezone_str):
     """
@@ -106,7 +114,6 @@ def get_timezone():
     try:
         # Find the timezone in the parameter
         timezone_str = request.args.get('timezone')
-
         if timezone_str:
             time_zone = validate_timezone(timezone_str)
         elif g.user and 'timezone' in g.user:
@@ -122,4 +129,4 @@ def get_timezone():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
