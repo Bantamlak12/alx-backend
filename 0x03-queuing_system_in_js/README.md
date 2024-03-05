@@ -83,3 +83,4 @@ $ kill [PID_OF_Redis_Server]
 | 10. Writing the job creation function                           | [8-job.js](./8-job.js)                                                   |
 | 11. Writing the test for job creation                           | [8-job.test.js](./8-job.test.js)                                         |
 | 12. In stock?                                                   | [9-stock.js](./9-stock.js)                                               |
+| 13. Can I have a seat?                                          | [100-seat.js](./100-seat.js)                                             |
